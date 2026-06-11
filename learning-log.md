@@ -136,3 +136,37 @@ These are part of engineering work and should be established before feature deve
 * Study layout.tsx and page.tsx
 * Customize the homepage
 * Complete Day 2 tasks
+
+## Day 2 - Understanding Project Structure
+
+### Goal
+
+Understand layout.tsx, page.tsx, globals.css, and Next.js App Router.
+
+### Completed
+
+- Analyzed layout.tsx
+- Analyzed page.tsx
+- Modified page.tsx to customize homepage
+- Observed automatic hot reload
+- Verified 404 responses for missing pages
+
+### Issues Encountered
+
+- None, just learning observations
+
+### Key Learnings
+
+- layout.tsx wraps all pages; children inserts page content
+- page.tsx determines the displayed content
+- globals.css applies global styles
+- Tailwind classes are applied via className
+- App Router automatically maps folder/file structure to URLs
+- Missing page.tsx results in 404
+- Hot reload enables real-time updates without restarting server
+
+### Next
+
+- Create /about page
+- Create /blog page
+- Plan homepage navigation links
