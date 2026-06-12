@@ -202,3 +202,13 @@ Understand layout.tsx, page.tsx, globals.css, and Next.js App Router.
 
 * Learn Podman basics.
 * Prepare blog containerization.
+
+#### Podman Basics
+
+Verified that Podman was already available on Fedora.
+
+Successfully ran the first container using:
+
+`podman run docker.io/library/hello-world`
+
+Learned that Podman requires explicit image sources when no default registry is configured.
