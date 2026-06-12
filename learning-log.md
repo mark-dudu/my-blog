@@ -145,28 +145,60 @@ Understand layout.tsx, page.tsx, globals.css, and Next.js App Router.
 
 ### Completed
 
-- Analyzed layout.tsx
-- Analyzed page.tsx
-- Modified page.tsx to customize homepage
-- Observed automatic hot reload
-- Verified 404 responses for missing pages
+* Analyzed layout.tsx
+* Analyzed page.tsx
+* Modified page.tsx to customize homepage
+* Observed automatic hot reload
+* Verified 404 responses for missing pages
 
 ### Issues Encountered
 
-- None, just learning observations
+* None, just learning observations
 
 ### Key Learnings
 
-- layout.tsx wraps all pages; children inserts page content
-- page.tsx determines the displayed content
-- globals.css applies global styles
-- Tailwind classes are applied via className
-- App Router automatically maps folder/file structure to URLs
-- Missing page.tsx results in 404
-- Hot reload enables real-time updates without restarting server
+* layout.tsx wraps all pages; children inserts page content
+* page.tsx determines the displayed content
+* globals.css applies global styles
+* Tailwind classes are applied via className
+* App Router automatically maps folder/file structure to URLs
+* Missing page.tsx results in 404
+* Hot reload enables real-time updates without restarting server
 
 ### Next
 
-- Create /about page
-- Create /blog page
-- Plan homepage navigation links
+* Create /about page
+* Create /blog page
+* Plan homepage navigation links
+
+## Day 3 - Static Pages and List Rendering
+
+### Goal
+
+* Build the first version of the blog skeleton.
+* Learn React list rendering.
+
+### Completed
+
+* Created About page.
+* Created Blog page.
+* Connected homepage navigation.
+* Used map() to render posts.
+* Added React key for list items.
+* Verified routing works.
+
+### Issues Encountered
+
+* Rendered post.title as plain text instead of JSX expression.
+
+### Key Learnings
+
+* JSX uses {} to evaluate JavaScript expressions.
+* React commonly uses map() to generate UI from arrays.
+* key helps React identify list items.
+* URL maps directly to App Router folder structure.
+
+### Next
+
+* Learn Podman basics.
+* Prepare blog containerization.
