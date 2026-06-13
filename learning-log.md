@@ -137,7 +137,7 @@ These are part of engineering work and should be established before feature deve
 * Customize the homepage
 * Complete Day 2 tasks
 
-## Day 2 - Understanding Project Structure
+## Day 2 - Understanding Project Structure (2026-06-11)
 
 ### Goal
 
@@ -171,7 +171,7 @@ Understand layout.tsx, page.tsx, globals.css, and Next.js App Router.
 * Create /blog page
 * Plan homepage navigation links
 
-## Day 3 - Static Pages and List Rendering
+## Day 3 - Static Pages and List Rendering (2026-06-12)
 
 ### Goal
 
@@ -212,3 +212,49 @@ Successfully ran the first container using:
 `podman run docker.io/library/hello-world`
 
 Learned that Podman requires explicit image sources when no default registry is configured.
+
+## Day 4 - Containerization Attempt (2026-06-13)
+
+### Goal
+
+* Explore blog containerization using Podman.
+* Understand the basic workflow of building and running containers.
+* Prepare the blog project for future production deployment.
+
+### Completed
+
+* Verified that Podman was available on Fedora (`podman version 5.8.2`).
+* Successfully ran the first container using:
+
+  * `podman run docker.io/library/hello-world`
+* Created the first Dockerfile for the blog project.
+* Attempted to build the blog image using Podman.
+* Modified the Dockerfile to use fully qualified image names.
+* Investigated multiple container build and runtime issues related to pnpm and Next.js.
+* Preserved the Dockerfile and containerization experiments for future improvement.
+
+### Issues Encountered
+
+* Podman could not resolve short image names such as `node:24-alpine` because no default registry was configured.
+* `pnpm install` failed during image build due to ignored build scripts (`sharp` and `unrs-resolver`).
+* Running the application inside the container using `pnpm dev` resulted in:
+
+  * `ERR_PNPM_ABORTED_REMOVE_MODULES_DIR_NO_TTY`.
+* The blog could not yet be successfully started from a container.
+
+### Key Learnings
+
+* Podman on Fedora may require fully qualified image names, such as:
+
+  * `docker.io/library/node:24-alpine`
+* Container environments are isolated and reproducible; they do not inherit local machine state.
+* Successfully running an application locally does not guarantee it will work correctly inside a container.
+* Containerizing a Next.js application involves additional considerations beyond simply running development commands.
+* Reading logs carefully and identifying the true point of failure is an important engineering skill.
+* Encountering and analyzing failures is a normal part of software development and often provides more learning value than straightforward success.
+
+### Next
+
+* Revisit blog containerization in Week 2.
+* Explore a production-friendly Next.js containerization approach.
+* Continue improving the blog after Milestone 1 priorities are completed.

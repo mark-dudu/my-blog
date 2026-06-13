@@ -40,3 +40,10 @@ pnpm dev
 * [ ] Tags
 * [ ] SEO optimization
 * [ ] Deployment
+
+## Current Status
+
+- Basic pages implemented
+- Podman environment verified
+- Containerization exploration completed
+- Production containerization planned for Week 2
