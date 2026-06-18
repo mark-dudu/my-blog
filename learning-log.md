@@ -258,3 +258,48 @@ Learned that Podman requires explicit image sources when no default registry is 
 * Revisit blog containerization in Week 2.
 * Explore a production-friendly Next.js containerization approach.
 * Continue improving the blog after Milestone 1 priorities are completed.
+
+## Day 5 - Dynamic Blog Routes (2026-06-18)
+
+### Goal
+
+Implement dynamic routes for blog posts using the Next.js App Router.
+
+### Completed
+
+* Added links from the blog list page to individual blog posts.
+* Created the dynamic route: `src/app/blog/[slug]/page.tsx`.
+* Retrieved route parameters using `params`.
+* Used `Array.find()` to locate the corresponding post based on the slug.
+* Rendered post details, including title, date, and excerpt.
+* Implemented a fallback state for non-existent posts.
+* Verified that navigation and rendering worked as expected.
+
+### Issues Encountered
+
+* Initially, I only displayed the `slug` value instead of rendering the actual post data.
+* Needed to distinguish between obtaining route parameters and using those parameters to retrieve and display data.
+* The `params` typing in newer versions of Next.js differs from many tutorials online, which required additional verification.
+
+### Key Learnings
+
+* Dynamic routes in Next.js are implemented using folder names such as `[slug]`.
+* The overall flow can be summarized as:
+
+  `URL → params → find data → render UI`
+
+* `params.slug` acts as the bridge between the URL and application data.
+* `Array.find()` provides a simple way to retrieve matching records from a collection.
+* Handling invalid routes is an important part of building robust applications.
+
+### Reflection
+
+Before implementing this feature, dynamic routing felt like a relatively advanced concept. After completing it step by step, I realized that the underlying idea is straightforward: extract a parameter from the URL, retrieve the corresponding data, and render the result.
+
+This experience reinforced that building small, complete feedback loops leads to deeper understanding than only reading documentation.
+
+### Next
+
+* Extract the shared `posts` data into a separate module to avoid duplication.
+* Explore Next.js `notFound()` as a more idiomatic way to handle missing content.
+* Prepare the blog structure for future Markdown-based posts.
