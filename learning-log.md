@@ -303,3 +303,41 @@ This experience reinforced that building small, complete feedback loops leads to
 * Extract the shared `posts` data into a separate module to avoid duplication.
 * Explore Next.js `notFound()` as a more idiomatic way to handle missing content.
 * Prepare the blog structure for future Markdown-based posts.
+
+## Day 6 - Shared Blog Data and Error Handling (2026-06-19)
+
+### Goal
+
+Improve the blog's code organization by extracting shared post data and adopting more idiomatic Next.js error handling.
+
+### Completed
+
+* Extracted duplicated blog post data into `src/data/posts.ts`.
+* Updated both the blog list page and dynamic blog detail page to use the shared data source.
+* Added a `content` field to blog posts to better simulate real articles.
+* Replaced manual "Post not found" rendering with Next.js `notFound()`.
+* Verified that all existing functionality continued to work correctly after the refactor.
+
+### Issues Encountered
+
+* Initially misunderstood how `notFound()` should be used and attempted to return the function itself instead of calling it.
+* Needed to distinguish between rendering an error message manually and delegating error handling to the framework.
+
+### Key Learnings
+
+* Duplicated data creates maintenance overhead and increases the risk of inconsistencies.
+* Centralizing shared data improves maintainability and prepares the project for future enhancements.
+* Next.js provides framework-level conventions such as `notFound()` to handle missing resources more elegantly.
+* Refactoring changes the internal structure of the code without necessarily changing visible functionality.
+
+### Reflection
+
+Today's work was less exciting than implementing new features, but it felt closer to real engineering practice. Organizing code, removing duplication, and adopting framework conventions make the project easier to extend and maintain.
+
+I also realized that good software development is not only about adding features. Improving the structure of existing code is equally important.
+
+### Next
+
+* Complete the Week 2 review and evaluate overall progress.
+* Review the current blog architecture and identify any remaining improvements.
+* Research approaches for integrating Markdown-based posts in Week 3 without rushing into implementation.

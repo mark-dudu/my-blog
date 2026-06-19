@@ -1,17 +1,5 @@
-const posts = [
-    {
-        slug: "getting-started-with-nextjs",
-        title: "Getting Started with Next.js",
-        date: "2026-06-18",
-        excerpt: "My first impressions of App Router.",
-    },
-    {
-        slug: "career-restart-journey",
-        title: "Career Restart Journey",
-        date: "2026-06-17",
-        excerpt: "Why I decided to rebuild my engineering skills.",
-    },
-];
+import { posts } from "@/data/posts";
+import { notFound } from "next/navigation";
 
 export default async function BlogPost({
     params,
@@ -24,26 +12,23 @@ export default async function BlogPost({
     );
 
     if (!post) {
-        return (
-            <div>Post not found.</div>
-        )
-    } else {
-
-        return (
-            <main className="p-8">
-                <h1 className="text-4xl font-bold">
-                    {post.title}
-                </h1>
-
-                <p className="mt-2 text-gray-500">
-                    {post.date}
-                </p>
-
-                <p className="mt-6">
-                    {post.excerpt}
-                </p>
-            </main>
-        );
+        notFound()
     }
+
+    return (
+        <main className="p-8">
+            <h1 className="text-4xl font-bold">
+                {post.title}
+            </h1>
+
+            <p className="mt-2 text-gray-500">
+                {post.date}
+            </p>
+
+            <p className="mt-6">
+                {post.excerpt}
+            </p>
+        </main>
+    );
 
 }
