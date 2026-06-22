@@ -5,7 +5,9 @@ export default function Home() {
         Mark's Blog
       </h1>
       <p className="text-lg mt-4">
-        Technology, Learning and Thoughts
+        A personal blog for technical learning, project progress, and long-term personal reflection.
+
+        This site is also used as a portfolio entry to document my transition back into software development.
       </p>
 
       <nav className="mt-8 gap-6 flex">

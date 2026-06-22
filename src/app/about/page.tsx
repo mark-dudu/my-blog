@@ -6,7 +6,10 @@ export default function About() {
       </h1>
 
       <p className="mt-4">
-        Software engineer learning modern web development.
+        I am currently rebuilding my software development skills through focused personal projects.
+
+        My current focus is backend-oriented full-stack development, with Mini Platform as the main engineering project and 
+        this blog as a place to document learning, reflection, and project progress.
       </p>
 
       <p className="mt-2">
