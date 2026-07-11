@@ -341,3 +341,63 @@ I also realized that good software development is not only about adding features
 * Complete the Week 2 review and evaluate overall progress.
 * Review the current blog architecture and identify any remaining improvements.
 * Research approaches for integrating Markdown-based posts in Week 3 without rushing into implementation.
+
+## Day 7 - Portfolio and Writing Experience Improvements (2026-07-11)
+
+### Goal
+
+Improve the blog from a basic Next.js practice project into a clearer personal website that supports both professional project showcase and long-term writing.
+
+### Completed
+
+* Redesigned the homepage with a clearer personal introduction and career direction.
+* Added current focus areas including Linux, Containers, Kubernetes, CI/CD, Automation, and Platform Engineering.
+* Improved the project showcase for Mini Platform and Personal Blog.
+* Added clearer navigation to projects, writing, About, and GitHub.
+* Changed the main website interface from English to Chinese while keeping technical terms and project names in English.
+* Improved the blog list page with article cards, categories, dates, descriptions, and hover states.
+* Updated the blog detail page with a consistent layout, category, date, and navigation links.
+* Expanded the About page with personal background, current work, technical direction, and the purpose of the website.
+* Removed automatic dark mode support for now and fixed the low-contrast text issue.
+* Updated the site metadata, HTML language, browser title, description, and favicon.
+* Added a one-time typewriter effect to the homepage title.
+* Verified the production build and production server using `pnpm build` and `pnpm start`.
+
+### Issues Encountered
+
+* The default automatic dark mode created a dark background while many page elements still used dark text colors.
+* The original blog list lacked visual hierarchy and was difficult to scan.
+* The blog detail page used a narrower container than the other pages, making the layout feel inconsistent.
+* The browser title and favicon still used the default Create Next App values.
+* The original English interface did not match the website's intended use as a primarily Chinese writing space.
+* The blog's professional showcase purpose initially felt stronger than its long-term personal writing purpose, so the overall positioning needed to be reconsidered.
+
+### Key Learnings
+
+* A portfolio website depends heavily on information hierarchy, not only on the amount of content.
+* The homepage should quickly communicate who I am, what I am building, and where visitors can find supporting evidence.
+* Professional project presentation and personal writing do not need to be separated into different websites.
+* Clear navigation and content structure can allow project documentation, technical writing, reading notes, and personal reflections to coexist.
+* The interface language should match the language used for most of the actual writing.
+* Technical names such as Kubernetes, FastAPI, GitHub, and Platform Engineering can remain in English within a Chinese interface.
+* Dark mode should only be enabled after both themes have been intentionally designed and tested.
+* Metadata, favicon, spacing, navigation, and visual consistency all affect whether a project feels ready for public presentation.
+* A successful development server is not enough; production build verification is also necessary.
+
+### Reflection
+
+Today's work changed the role of the blog significantly.
+
+It is no longer only a Next.js learning project. It has started to become a personal website that can present my engineering work while also supporting long-term writing and reflection.
+
+I initially focused mainly on its portfolio value, but during the redesign I realized that this website should continue to be useful even after the current job search stage. Technical notes, project records, reading notes, personal reflection, and career growth can all belong to the same long-term space.
+
+The website is still simple, but its purpose and information structure are now much clearer.
+
+### Next
+
+* Replace the current test post data with real content when the article system is ready.
+* Research and select an appropriate Markdown or MDX content approach.
+* Write the first real project article about Mini Platform.
+* Consider adding a shared navigation header when the number of pages increases.
+* Prepare the blog for deployment at an appropriate stage.
